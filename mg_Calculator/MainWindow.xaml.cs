@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Diagnostics;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -14,16 +16,23 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 
+
 namespace mg_Calculator
 {
     /// <summary>
     /// MainWindow.xaml에 대한 상호 작용 논리
     /// </summary>
+    /// 
     public partial class MainWindow : Window
     {
+
         double lastNumber; // 연산하기 전 값 저장 변수
         double result; // 연산 후 값 저장 변수
+        bool Emptycheck = false;
+
         SelectedOperator selectedOperator;
+
+
 
         public enum SelectedOperator
         {
@@ -35,6 +44,7 @@ namespace mg_Calculator
 
         public class SimpleMath
         {
+
             public static double Plus(double n1, double n2)
             {
                 return n1 + n2;
@@ -59,13 +69,13 @@ namespace mg_Calculator
         public MainWindow()
         {
             InitializeComponent();
-
+            
             ///Result Label code
             Grid.SetRow(ResultLabel, 0);
             Grid.SetColumnSpan(ResultLabel, 4);
-            ResultLabel.HorizontalContentAlignment = HorizontalAlignment.Right;
-            ResultLabel.VerticalContentAlignment = VerticalAlignment.Bottom;            
-            ResultLabel.Content = "0";
+            ResultLabel.HorizontalAlignment = HorizontalAlignment.Right;
+            ResultLabel.VerticalAlignment = VerticalAlignment.Bottom;
+            ResultLabel.Text = "0";
             ResultLabel.Margin = new Thickness(0, 0, 10, 0);
             ResultLabel.Foreground = Brushes.White;
             ResultLabel.FontSize = 80;
@@ -270,132 +280,141 @@ namespace mg_Calculator
         private void numberButton_Click(object sender, RoutedEventArgs e)
         {
             int selectedValue = 0;
-            if(sender == ZeroButton)
+
+            if (Emptycheck == false) 
+            {
+                ResultLabel.Text = string.Empty;
+                Emptycheck = true;
+            }
+
+            
+
+            if (sender == ZeroButton)
             {
                 selectedValue = 0;
-                if(ResultLabel.Content.ToString() == "0")
+                if(ResultLabel.Text.ToString() == "0")
                 {
-                    ResultLabel.Content = selectedValue.ToString();
+                    ResultLabel.Text = selectedValue.ToString();
                 }
                 else
                 {
-                    ResultLabel.Content += selectedValue.ToString();
+                    ResultLabel.Text += selectedValue.ToString();
                 }
             }
             if(sender == OneButton)
             {
                 selectedValue = 1;
-                if(ResultLabel.Content.ToString() == "1")
+                if(ResultLabel.Text.ToString() == "1")
                 {
-                    ResultLabel.Content.ToString();
+                    ResultLabel.Text.ToString();
                 }
                 else
                 {
-                    ResultLabel.Content += selectedValue.ToString();
+                    ResultLabel.Text += selectedValue.ToString();
                 }
             }
 
             if(sender == TwoButton)
             {
                 selectedValue = 2;
-                if (ResultLabel.Content.ToString() == "2")
+                if (ResultLabel.Text.ToString() == "2")
                 {
-                    ResultLabel.Content.ToString();
+                    ResultLabel.Text.ToString();
                 }
                 else
                 {
-                    ResultLabel.Content += selectedValue.ToString();
+                    ResultLabel.Text += selectedValue.ToString();
                 }
             }
 
             if (sender == ThreeButton)
             {
                 selectedValue = 3;
-                if (ResultLabel.Content.ToString() == "3")
+                if (ResultLabel.Text.ToString() == "3")
                 {
-                    ResultLabel.Content.ToString();
+                    ResultLabel.Text.ToString();
                 }
                 else
                 {
-                    ResultLabel.Content += selectedValue.ToString();
+                    ResultLabel.Text += selectedValue.ToString();
                 }
             }
 
             if (sender == Fourbutton)
             {
                 selectedValue = 4;
-                if (ResultLabel.Content.ToString() == "4")
+                if (ResultLabel.Text.ToString() == "4")
                 {
-                    ResultLabel.Content.ToString();
+                    ResultLabel.Text.ToString();
                 }
                 else
                 {
-                    ResultLabel.Content += selectedValue.ToString();
+                    ResultLabel.Text += selectedValue.ToString();
                 }
             }
 
             if (sender == FiveButton)
             {
                 selectedValue = 5;
-                if (ResultLabel.Content.ToString() == "5")
+                if (ResultLabel.Text.ToString() == "5")
                 {
-                    ResultLabel.Content.ToString();
+                    ResultLabel.Text.ToString();
                 }
                 else
                 {
-                    ResultLabel.Content += selectedValue.ToString();
+                    ResultLabel.Text += selectedValue.ToString();
                 }
             }
 
             if (sender == SixButton)
             {
                 selectedValue = 6;
-                if (ResultLabel.Content.ToString() == "6")
+                if (ResultLabel.Text.ToString() == "6")
                 {
-                    ResultLabel.Content.ToString();
+                    ResultLabel.Text.ToString();
                 }
                 else
                 {
-                    ResultLabel.Content += selectedValue.ToString();
+                    ResultLabel.Text += selectedValue.ToString();
                 }
             }
 
             if (sender == SevenButton)
             {
                 selectedValue = 7;
-                if (ResultLabel.Content.ToString() == "7")
+                if (ResultLabel.Text.ToString() == "7")
                 {
-                    ResultLabel.Content.ToString();
+                    ResultLabel.Text.ToString();
                 }
                 else
                 {
-                    ResultLabel.Content += selectedValue.ToString();
+                    ResultLabel.Text += selectedValue.ToString();
                 }
             }
 
             if (sender == EightButton)
             {
                 selectedValue = 8;
-                if (ResultLabel.Content.ToString() == "8")
+                if (ResultLabel.Text.ToString() == "8")
                 {
-                    ResultLabel.Content.ToString();
+                    ResultLabel.Text.ToString();
                 }
                 else
                 {
-                    ResultLabel.Content += selectedValue.ToString();
+                    ResultLabel.Text += selectedValue.ToString();
                 }
             }
 
             if (sender == NineButton)
             {
                 selectedValue = 9;
-                if (ResultLabel.Content.ToString() == "9")
+                if (ResultLabel.Text.ToString() == "9")
                 {
-                    ResultLabel.Content.ToString();
+                    ResultLabel.Text.ToString();
                 }
                 else
                 {
-                    ResultLabel.Content += selectedValue.ToString();
+                    ResultLabel.Text += selectedValue.ToString();
                 }
             }
         }
@@ -403,17 +422,29 @@ namespace mg_Calculator
 
         private void ClearButton_Click(object sender, RoutedEventArgs e)
         {
+            ResultLabel.Text = string.Empty;
             
+            ResultLabel.Text = "0";
+            Emptycheck = false;
         }
 
         private void BuhoButton_Click(object sender, RoutedEventArgs e)
         {
-
+            double lastNumber;
+            if (double.TryParse(ResultLabel.Text.ToString(), out lastNumber))
+            {
+                lastNumber = lastNumber * -1;
+                ResultLabel.Text = lastNumber.ToString();
+            }
         }
 
         private void PercentButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if(double.TryParse(ResultLabel.Text.ToString(), out lastNumber))
+            {
+                lastNumber = lastNumber * 0.01;
+                ResultLabel.Text = lastNumber.ToString();
+            }
         }
 
         private void DevideButton_Click(object sender, RoutedEventArgs e)
@@ -438,15 +469,52 @@ namespace mg_Calculator
 
         private void ResultButton_Click(object sender, RoutedEventArgs e)
         {
+            double newNumber;
+            newNumber = double.Parse(ResultLabel.Text.ToString());
+            switch(selectedOperator)
+            {
+                case SelectedOperator.plus:
+                    result = SimpleMath.Plus(lastNumber, newNumber);
+                    break;
 
+                case SelectedOperator.minus:
+                    result = SimpleMath.Minus(lastNumber, newNumber);
+                    break;
+
+                case SelectedOperator.multi:
+                    result = SimpleMath.Multiple(lastNumber, newNumber);
+                    break;
+
+                case SelectedOperator.div:
+                    result = SimpleMath.Divide(lastNumber, newNumber);
+                    break;
+            }
+            ResultLabel.Text = result.ToString();
         }
 
         private void DotButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Boolean a;
+            a = ResultLabel.Text.ToString().Contains(".");
+            if(ResultLabel.Text.ToString() == "0")
+            {
+                return;
+            }
+            else
+            {
+                if(a==false)
+                {
+                    ResultLabel.Text += ".";
+                }
+            }
         }
 
         private void OperationButton_click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DevideButton_Click_1(object sender, RoutedEventArgs e)
         {
 
         }
