@@ -1,0 +1,15 @@
+C:\Users\MOONGOO\source\repos\mg_Calculator\mg_Calculator\obj\Debug\mg_Calculator.csproj.AssemblyReference.cache
+C:\Users\MOONGOO\source\repos\mg_Calculator\mg_Calculator\obj\Debug\MainWindow.g.cs
+C:\Users\MOONGOO\source\repos\mg_Calculator\mg_Calculator\obj\Debug\App.g.cs
+C:\Users\MOONGOO\source\repos\mg_Calculator\mg_Calculator\obj\Debug\mg_Calculator_MarkupCompile.cache
+C:\Users\MOONGOO\source\repos\mg_Calculator\mg_Calculator\obj\Debug\mg_Calculator_MarkupCompile.lref
+C:\Users\MOONGOO\source\repos\mg_Calculator\mg_Calculator\bin\Debug\mg_Calculator.exe.config
+C:\Users\MOONGOO\source\repos\mg_Calculator\mg_Calculator\bin\Debug\mg_Calculator.exe
+C:\Users\MOONGOO\source\repos\mg_Calculator\mg_Calculator\bin\Debug\mg_Calculator.pdb
+C:\Users\MOONGOO\source\repos\mg_Calculator\mg_Calculator\obj\Debug\MainWindow.baml
+C:\Users\MOONGOO\source\repos\mg_Calculator\mg_Calculator\obj\Debug\mg_Calculator.g.resources
+C:\Users\MOONGOO\source\repos\mg_Calculator\mg_Calculator\obj\Debug\mg_Calculator.Properties.Resources.resources
+C:\Users\MOONGOO\source\repos\mg_Calculator\mg_Calculator\obj\Debug\mg_Calculator.csproj.GenerateResource.cache
+C:\Users\MOONGOO\source\repos\mg_Calculator\mg_Calculator\obj\Debug\mg_Calculator.csproj.CoreCompileInputs.cache
+C:\Users\MOONGOO\source\repos\mg_Calculator\mg_Calculator\obj\Debug\mg_Calculator.exe
+C:\Users\MOONGOO\source\repos\mg_Calculator\mg_Calculator\obj\Debug\mg_Calculator.pdb
