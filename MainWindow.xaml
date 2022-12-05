@@ -1,0 +1,217 @@
+﻿<Window x:Class="mg_Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mg_Calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="628.153" Width="406.745">
+
+    <Grid Background="Black">
+
+        <!-- Row Definition 5-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+
+        <!--Col Definition 4-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+
+        <!--Result Label code-->
+        <TextBlock x:Name="ResultLabel"/>
+
+        <!--Num 0 Button code-->
+        <Button x:Name="ZeroButton">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="35"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!--. Button code-->
+        <Button x:Name="DotButton">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- Result Button code-->
+        <Button x:Name="ResultButton">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- Num 1 Button code-->
+        <Button x:Name="OneButton">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- Num 2 Button code-->
+        <Button x:Name="TwoButton">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- Num 3 Button code-->
+        <Button x:Name="ThreeButton">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- + Button code-->
+        <Button x:Name="PlusButton">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- Num 4 Button code-->
+        <Button x:Name="Fourbutton">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- Num 5 Button code-->
+        <Button x:Name="FiveButton">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- Num 6 Button code-->
+        <Button x:Name="SixButton">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- - Button code-->
+        <Button x:Name="MinusButton">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- Num 7 Button code-->
+        <Button x:Name="SevenButton">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- Num 8 Button code-->
+        <Button x:Name="EightButton">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- Num 9 Button code-->
+        <Button x:Name="NineButton">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- Multi Button code-->
+        <Button x:Name="MultiButton">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- AC Button code-->
+        <Button x:Name="ClearButton">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- Buho Button code-->
+        <Button x:Name="BuhoButton">
+            <Button.Resources>
+                
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- Percent Button code-->
+        <Button x:Name="PercentButton">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- Devide Button code-->
+        <Button x:Name="DevideButton" Background="Black" RenderTransformOrigin="0.5,0.5" Click="OperationButton_click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"></Setter>
+                </Style>
+            </Button.Resources>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.843"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.735"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+
+    </Grid>
+</Window>
